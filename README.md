@@ -46,13 +46,13 @@ User → ALB → Target Group → EC2 (Auto Scaling) → RDS
 
 ### 🔹 Application via ALB (Live Output)
 
-![ALB](Website through ALB-DNS.png)
+![ALB](Website_through_ALB-DNS.png)
 
 ---
 
 ### 🔹 Application Load Balancer Configuration
 
-![ALB Config](Application Load Balancer.png)
+![ALB Config](Application_Load_Balancer.png)
 
 ---
 
