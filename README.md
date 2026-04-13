@@ -2,13 +2,13 @@
 
 ## 📌 Overview
 
-This project demonstrates a highly available, scalable, and secure AWS architecture using real-world DevOps practices. It includes a dynamic PHP web application connected to an AWS RDS MySQL database.
+This project demonstrates a highly available, scalable, and secure AWS architecture using real-world DevOps practices. It includes a dynamic PHP web application connected to an AWS RDS MySQL database and deployed using a production-style infrastructure.
 
 ---
 
 ## 🏗️ Architecture
 
-![Architecture](architecture.png)
+![Architecture](Project-Architecture.png)
 
 ---
 
@@ -17,12 +17,12 @@ This project demonstrates a highly available, scalable, and secure AWS architect
 * Application Load Balancer (ALB)
 * Auto Scaling Group (ASG)
 * Private EC2 instances (secured)
-* Bastion Host for SSH access
+* Bastion Host for secure SSH access
 * RDS MySQL database
 * NAT Gateway for internet access
 * CloudWatch monitoring
 * SNS alerts (email notifications)
-* Dynamic PHP web application (form + database)
+* Dynamic PHP web application (user form + database storage)
 
 ---
 
@@ -44,43 +44,55 @@ User → ALB → Target Group → EC2 (Auto Scaling) → RDS
 
 ## 📸 Screenshots
 
-### 🔹 Application Load Balancer Output
+### 🔹 Application via ALB (Live Output)
 
-![ALB](screenshots/alb-working.png)
+![ALB](Website through ALB-DNS.png)
+
+---
+
+### 🔹 Application Load Balancer Configuration
+
+![ALB Config](Application Load Balancer.png)
+
+---
 
 ### 🔹 RDS Database
 
-![RDS](screenshots/rds-data.png)
+![RDS](RDS-1.png)
+
+---
 
 ### 🔹 Auto Scaling Group
 
-![ASG](screenshots/asg-instances.png)
+![ASG](ASG-1.png)
 
-### 🔹 EC2 Instances
+---
 
-![EC2](screenshots/ec2.png)
+### 🔹 Running EC2 Instances
+
+![EC2](Running-Instance.png)
 
 ---
 
 ## 💡 Key Learnings
 
-* Designed scalable cloud architecture
-* Implemented load balancing and auto scaling
-* Secured infrastructure using private subnets
-* Integrated monitoring and alerting
-* Built a full-stack web app with AWS backend
+* Designed and deployed a scalable AWS cloud architecture
+* Implemented load balancing and auto scaling for high availability
+* Secured infrastructure using private subnets and Bastion host
+* Integrated monitoring and alerting using CloudWatch and SNS
+* Built and deployed a full-stack web application on AWS
 
 ---
 
 ## 🚀 How to Run
 
-1. Launch VPC with public & private subnets
-2. Create EC2 instances (Bastion + Private)
+1. Create VPC with public and private subnets
+2. Launch EC2 instances (Bastion + Private)
 3. Setup RDS MySQL database
-4. Configure ALB & Target Group
+4. Configure Application Load Balancer and Target Group
 5. Create Auto Scaling Group
-6. Deploy PHP application
-7. Access using ALB DNS
+6. Deploy PHP application on EC2
+7. Access application using ALB DNS
 
 ---
 
