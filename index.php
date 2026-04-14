@@ -41,10 +41,10 @@
 </div>
 
 <?php
-// ✅ RDS Connection Details
+//  RDS Connection Details
 $servername = "database-2.coz8c2me42xv.us-east-1.rds.amazonaws.com";
 $username = "admin";
-$password = "admin123"; // 🔥 change this
+$password = "admin123"; //
 $db = "DevopsDB";
 
 // Create connection
@@ -61,12 +61,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $firstname = $_POST['firstname'];
     $email = $_POST['email'];
 
-    // ✅ Secure query (prevents SQL injection)
+    //  Secure query (prevents SQL injection)
     $stmt = $conn->prepare("INSERT INTO data (firstname, email) VALUES (?, ?)");
     $stmt->bind_param("ss", $firstname, $email);
 
     if ($stmt->execute()) {
-        echo "<script>alert('✅ Data submitted successfully!');</script>";
+        echo "<script>alert(' Data submitted successfully!');</script>";
     } else {
         echo "<script>alert('❌ Error occurred');</script>";
     }
